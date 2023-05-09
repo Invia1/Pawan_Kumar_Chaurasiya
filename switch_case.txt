@@ -1,0 +1,107 @@
+using System;
+
+namespace ConsoleApp1
+{
+class SwitchCase
+{
+static void Main(string[] args)
+{
+SwitchCase obj = new SwitchCase();
+obj.CalculateProgram();
+}
+
+private void CalculateProgram()
+{
+int number, i;
+Console.WriteLine(&quot;Welcome to calculation program&quot;);
+while (true)
+{
+Console.WriteLine(&quot;Select number from given options:&quot;);
+Console.WriteLine(&quot;1 - Fibonacci series&quot;);
+Console.WriteLine(&quot;2 - Prime number&quot;);
+Console.WriteLine(&quot;3 - Factoral&quot;);
+Console.WriteLine();
+string selectedOption = Console.ReadLine();
+switch (selectedOption)
+{
+case &quot;1&quot;:
+int n1 = 0, n2 = 1, n3;
+Console.WriteLine(&quot;Fibonacci series program-&quot;);
+
+Console.Write(&quot;Enter the number of elements: &quot;);
+number = int.Parse(Console.ReadLine());
+Console.Write(n1 + &quot; &quot; + n2 + &quot; &quot;);
+for (i = 2; i &lt; number; ++i)
+{
+n3 = n1 + n2;
+Console.Write(n3 + &quot; &quot;);
+n1 = n2;
+n2 = n3;
+}
+Console.WriteLine();
+break;
+
+case &quot;2&quot;:
+int res=0;
+Console.WriteLine(&quot;Prime number program-&quot;);
+Console.Write(&quot;Enter the Number to check Prime: &quot;);
+number = int.Parse(Console.ReadLine());
+
+for (i = 1; i &lt;= number; i++)
+{
+if (number % i == 0)
+{
+res++;
+}
+}
+if (res == 2)
+{
+Console.WriteLine(&quot;Number is Prime.&quot;);
+
+}
+else
+{
+Console.WriteLine(&quot;Number is not Prime.&quot;);
+}
+break;
+
+case &quot;3&quot;:
+int fact = 1;
+Console.WriteLine(&quot;Factorial program-&quot;);
+Console.Write(&quot;Enter any Number: &quot;);
+number = int.Parse(Console.ReadLine());
+for (i = 1; i &lt;= number; i++)
+{
+fact = fact * i;
+}
+Console.WriteLine(&quot;Factorial of &quot; + number + &quot; is: &quot; + fact);
+break;
+
+default:
+Console.WriteLine(&quot;Invalid Number&quot;);
+break;
+}
+
+Console.WriteLine();
+Console.WriteLine(&quot;Do you want to run program again ? (y/n)&quot;);
+string runAgain = Console.ReadLine();
+
+if (runAgain == &quot;n&quot; || runAgain == &quot;N&quot;)
+
+{
+break;
+}
+else if (runAgain != &quot;y&quot; || runAgain != &quot;Y&quot;)
+{
+Console.Clear();
+Console.WriteLine(&quot;Invalid selection.&quot;);
+Console.WriteLine(&quot;Do you want to run program again ? (y/n)&quot;);
+}
+else
+{
+Console.Clear();
+}
+}
+}
+}
+}
