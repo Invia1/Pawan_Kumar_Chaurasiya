@@ -1,0 +1,7 @@
+C:\Users\InviaILC\source\repos\RIM_Hospital\RIM_Hospital\obj\Debug\RIM_Hospital.csproj.AssemblyReference.cache
+C:\Users\InviaILC\source\repos\RIM_Hospital\RIM_Hospital\obj\Debug\RIM_Hospital.csproj.CoreCompileInputs.cache
+C:\Users\InviaILC\source\repos\RIM_Hospital\RIM_Hospital\bin\Debug\RIM_Hospital.exe.config
+C:\Users\InviaILC\source\repos\RIM_Hospital\RIM_Hospital\bin\Debug\RIM_Hospital.exe
+C:\Users\InviaILC\source\repos\RIM_Hospital\RIM_Hospital\bin\Debug\RIM_Hospital.pdb
+C:\Users\InviaILC\source\repos\RIM_Hospital\RIM_Hospital\obj\Debug\RIM_Hospital.exe
+C:\Users\InviaILC\source\repos\RIM_Hospital\RIM_Hospital\obj\Debug\RIM_Hospital.pdb
