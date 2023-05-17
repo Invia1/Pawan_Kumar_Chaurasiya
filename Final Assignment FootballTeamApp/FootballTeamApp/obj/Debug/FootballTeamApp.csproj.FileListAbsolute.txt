@@ -1,0 +1,7 @@
+C:\Users\InviaILC\source\repos\FootballTeamApp\FootballTeamApp\obj\Debug\FootballTeamApp.csproj.AssemblyReference.cache
+C:\Users\InviaILC\source\repos\FootballTeamApp\FootballTeamApp\obj\Debug\FootballTeamApp.csproj.CoreCompileInputs.cache
+C:\Users\InviaILC\source\repos\FootballTeamApp\FootballTeamApp\bin\Debug\FootballTeamApp.exe.config
+C:\Users\InviaILC\source\repos\FootballTeamApp\FootballTeamApp\bin\Debug\FootballTeamApp.exe
+C:\Users\InviaILC\source\repos\FootballTeamApp\FootballTeamApp\bin\Debug\FootballTeamApp.pdb
+C:\Users\InviaILC\source\repos\FootballTeamApp\FootballTeamApp\obj\Debug\FootballTeamApp.exe
+C:\Users\InviaILC\source\repos\FootballTeamApp\FootballTeamApp\obj\Debug\FootballTeamApp.pdb
