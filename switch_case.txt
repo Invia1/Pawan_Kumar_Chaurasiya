@@ -13,41 +13,41 @@ obj.CalculateProgram();
 private void CalculateProgram()
 {
 int number, i;
-Console.WriteLine(&quot;Welcome to calculation program&quot;);
+Console.WriteLine("Welcome to calculation program");
 while (true)
 {
-Console.WriteLine(&quot;Select number from given options:&quot;);
-Console.WriteLine(&quot;1 - Fibonacci series&quot;);
-Console.WriteLine(&quot;2 - Prime number&quot;);
-Console.WriteLine(&quot;3 - Factoral&quot;);
+Console.WriteLine("Select number from given options:");
+Console.WriteLine("1 - Fibonacci series");
+Console.WriteLine("2 - Prime number");
+Console.WriteLine("3 - Factoral");
 Console.WriteLine();
 string selectedOption = Console.ReadLine();
 switch (selectedOption)
 {
-case &quot;1&quot;:
+case "1":
 int n1 = 0, n2 = 1, n3;
-Console.WriteLine(&quot;Fibonacci series program-&quot;);
+Console.WriteLine("Fibonacci series program-");
 
-Console.Write(&quot;Enter the number of elements: &quot;);
+Console.Write("Enter the number of elements:");
 number = int.Parse(Console.ReadLine());
-Console.Write(n1 + &quot; &quot; + n2 + &quot; &quot;);
-for (i = 2; i &lt; number; ++i)
+Console.Write(n1 + " " + n2 + " ");
+for (i = 2; i < number; ++i)
 {
 n3 = n1 + n2;
-Console.Write(n3 + &quot; &quot;);
+Console.Write(n3 + " ");
 n1 = n2;
 n2 = n3;
 }
 Console.WriteLine();
 break;
 
-case &quot;2&quot;:
-int res=0;
-Console.WriteLine(&quot;Prime number program-&quot;);
-Console.Write(&quot;Enter the Number to check Prime: &quot;);
+case "2":
+int res , flag=0;
+Console.WriteLine("Prime number program-");
+Console.Write("Enter the Number to check Prime: ");
 number = int.Parse(Console.ReadLine());
 
-for (i = 1; i &lt;= number; i++)
+for (i = 1; i <= number; i++)
 {
 if (number % i == 0)
 {
@@ -56,46 +56,46 @@ res++;
 }
 if (res == 2)
 {
-Console.WriteLine(&quot;Number is Prime.&quot;);
+Console.WriteLine("Number is Prime.");
 
 }
 else
 {
-Console.WriteLine(&quot;Number is not Prime.&quot;);
+Console.WriteLine("Number is not Prime.");
 }
 break;
 
-case &quot;3&quot;:
+case "3":
 int fact = 1;
-Console.WriteLine(&quot;Factorial program-&quot;);
-Console.Write(&quot;Enter any Number: &quot;);
+Console.WriteLine("Factorial program-");
+Console.Write("Enter any Number: ");
 number = int.Parse(Console.ReadLine());
-for (i = 1; i &lt;= number; i++)
+for (i = 1; i <= number; i++)
 {
 fact = fact * i;
 }
-Console.WriteLine(&quot;Factorial of &quot; + number + &quot; is: &quot; + fact);
+Console.WriteLine("Factorial of " + number + " is: " + fact);
 break;
 
 default:
-Console.WriteLine(&quot;Invalid Number&quot;);
+Console.WriteLine("Invalid Number");
 break;
 }
 
 Console.WriteLine();
-Console.WriteLine(&quot;Do you want to run program again ? (y/n)&quot;);
+Console.WriteLine("Do you want to run program again ? (y/n)");
 string runAgain = Console.ReadLine();
 
-if (runAgain == &quot;n&quot; || runAgain == &quot;N&quot;)
+if (runAgain == "n" || runAgain == "N")
 
 {
 break;
 }
-else if (runAgain != &quot;y&quot; || runAgain != &quot;Y&quot;)
+else if (runAgain != "y" || runAgain != "Y")
 {
 Console.Clear();
-Console.WriteLine(&quot;Invalid selection.&quot;);
-Console.WriteLine(&quot;Do you want to run program again ? (y/n)&quot;);
+Console.WriteLine("Invalid selection.");
+Console.WriteLine("Do you want to run program again ? (y/n)");
 }
 else
 {
