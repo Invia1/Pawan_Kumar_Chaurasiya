@@ -30,8 +30,8 @@ namespace RIM_Hospital.Funtionality
             //        break;
             //    }
 
-            }
-
+            //}
+                PatientList.Add(plr);
                 return PatientList;
             }
         public List<PatientDec> GetPatient()
