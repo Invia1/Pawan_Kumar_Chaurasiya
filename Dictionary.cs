@@ -12,10 +12,10 @@ namespace Dictionary.User_UI
         public void Addfunc()
         {
             DicList.Add(1,"Pawan");
-            DicList.Add(2, "Pawan");
-            DicList.Add(3, "Pawan");
-            DicList.Add(4, "Pawan");
-            DicList.Add(5, "Pawan");
+            DicList.Add(2, "Saroj");
+            DicList.Add(3, "Manoj");
+            DicList.Add(4, "Vinod");
+            DicList.Add(5, "Aman");
 
         }
         public Dictionary<int,string> Show_Record()
