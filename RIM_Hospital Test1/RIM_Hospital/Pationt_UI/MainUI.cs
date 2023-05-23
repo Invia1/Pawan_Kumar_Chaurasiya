@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using RIM_Hospital.Model;
 using RIM_Hospital.Funtionality;
@@ -10,53 +10,55 @@ namespace RIM_Hospital.Pationt_UI
 {
     class MainUI
     {
-        
+
 
         public static void Main()
+        {
+            INterfacePat pt = new PatientOperation();
+
+            while (true)
             {
+                
+                Console.WriteLine("***** Welcome to RIM Hospital *****\n");
+                Console.WriteLine("Select from given options :");
+                Console.WriteLine("1 - Patient registration");
+                Console.WriteLine("2 - Show all patient");
+                Console.WriteLine("3 - Show patient by id");
+                Console.WriteLine();
+                int selectedValue = int.Parse(Console.ReadLine());   
+                Console.Clear();
+                switch (selectedValue)
+                {
+                    case 1:
+                        pt.PatientRegistration();
+                        break;
+                    case 2:
+                        Dictionary<int, PatientDec> objList = pt.GetPatient();
+                        Console.WriteLine(" \nThe Whole Data of the Patient is as below:- \n");
+                        foreach (var data in objList)
+                        {
 
+                            Console.WriteLine("Patient Registration id :- " + data.Key + "\nFull Name :- " + data.Value.First_name + " " + data.Value.Middle_name + " " + data.Value.Last_name + "\nMobile No :- " + data.Value.Phone_No + "\nGender :- " + data.Value.Gender + "\nPat. Age :- " + data.Value.Patient_Age + "\nAddress :- " + data.Value.Patient_Address + "\n Addhar No :- " + data.Value.Patient_AaddharNo + "\nCounsultation :- " + data.Value.Patient_to_Consulted);
+                            Console.WriteLine();
+                        }
+                        break;
+                    case 3:
+                        Console.WriteLine("Please enter patient id:");
+                        int id = int.Parse(Console.ReadLine());
+                        PatientDec patientById = pt.GetPatientById(id);
+                        Console.WriteLine("Entered " + id + " details are as follows :-");
+                        Console.WriteLine("Patient Registration id :- " + id + "\nFull Name :- " + patientById.First_name + " " + patientById.Middle_name + " " + patientById.Last_name + "\nMobile No :- " + patientById.Phone_No + "\nGender :- " + patientById.Gender + "\nPat. Age :- " + patientById.Patient_Age + "\nAddress :- " + patientById.Patient_Address + "\n Addhar No :- " + patientById.Patient_AaddharNo + "\nCounsultation :- " + patientById.Patient_to_Consulted);
+                        break;
 
+                    
 
-            PatientDec obj = new PatientDec();
-            Console.Write("Enter the ID Number Not Less Than 3 Number: ");
-            obj.Patient_Registration_ID = int.Parse(Console.ReadLine());
-            Console.Write("Enter the First name: ");
-            obj.First_name = (Console.ReadLine());
-            Console.Write("Enter the Middle Name: ");
-            obj.Middle_name = Console.ReadLine();
-            Console.Write("Enter the Last Name: ");
-            obj.Last_name = Console.ReadLine();
-            Console.Write("Enter the Phone No: ");
-            obj.Phone_No = int.Parse( Console.ReadLine());
-            Console.Write("Enter your Gender ");
-            obj.Gender = (Console.ReadLine());
-            Console.Write("Enter the Patient Age in year(Number Form): ");
-            obj.Patient_Age = int.Parse(Console.ReadLine());
-            Console.Write("Enter the Paitent Address: ");
-            obj.Patient_Address = Console.ReadLine();
-            Console.Write("Enter the Aaddhar Number: ");
-            obj.Patient_AaddharNo = int.Parse( Console.ReadLine());
-            Console.Write("Enter the Patient to be Consulted from which Department: ");
-            obj.Patient_to_Consulted = Console.ReadLine();
+                    default:
+                        Console.WriteLine("Invalid selection");
+                        break;
 
-            
-            InterfacePat pt = new PatientOperation();
-            pt.PatientRegistration(obj);
-            
+                }
 
-            List<PatientDec> objList = pt.GetPatient();
-            foreach (var data in objList)
-            {
-                Console.WriteLine(" \nThe Whole Data of the Patient is as below:- \n");
-                Console.WriteLine("Patient Registration id :- "+data.Patient_Registration_ID + "\nFull Name :- " + data.First_name + " " + data.Middle_name + " " + data.Last_name + "\nMobile No :- " + data.Phone_No+"\nGender :- " + data.Gender + "\nPat. Age :- " + data.Patient_Age + "\nAddress :- " + data.Patient_Address + "\n Addhar No :- " + data.Patient_AaddharNo + "\nCounsultation :- " + data.Patient_to_Consulted);
-                Console.ReadLine();
-                break;
             }
-            Console.WriteLine(" The Whole Data of the Patient is as below:- ");
-            
-            Console.ReadLine();
-
-
         }
     }
 }
