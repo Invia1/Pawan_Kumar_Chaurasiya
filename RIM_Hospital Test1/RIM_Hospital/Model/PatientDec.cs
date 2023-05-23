@@ -8,7 +8,6 @@ namespace RIM_Hospital.Model
     {
        
         
-            public int Patient_Registration_ID  { get; set; }
             public string First_name { get; set; }
             public string Middle_name { get; set; }
             public string Last_name { get; set; }
